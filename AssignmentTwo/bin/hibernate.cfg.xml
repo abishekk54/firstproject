@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC 
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<property name="hibernate.connection.driver_class">
+			oracle.jdbc.driver.OracleDriver
+		</property>
+
+		<property name="hibernate.connection.url">
+			jdbc:oracle:thin:@//localhost:1521/xe
+		</property>
+
+		<property name="hibernate.connection.username">USER1</property>
+		<property name="hibernate.connection.password">USER1</property>
+
+
+		<property name="show_sql">true</property>
+
+		<property name="dialect">
+			org.hibernate.dialect.Oracle9Dialect
+		</property>
+   
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<mapping class="ques2.Item" />
+		
+		<mapping class="ques1.Event" />
+		
+		<mapping class="ques1.EventTwo" />
+		<mapping class="ques1.FeedBack2" />
+		
+		<mapping class="ques1.c.WwfEvent" />
+		<mapping class="ques1.c.WwfFeedback" />
+		
+		
+	</session-factory>
+
+
+</hibernate-configuration>
+  	
